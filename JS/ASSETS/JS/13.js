@@ -91,5 +91,5 @@ AJOUTER UN ELEMENT
     // je veux que mon lien soit rouge
     a.style.color = "red";
 
-    //je veux que mon lien ne soit pas souligné
+    // je veux que mon lien ne soit pas souligné - textDecoration (sans '-')
     a.style.textDecoration = "none";

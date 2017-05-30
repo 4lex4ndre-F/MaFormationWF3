@@ -39,3 +39,5 @@ un ou plusieuers éléments (une liste) HTML à aprtir de leur <nom de balise>
 
 var span = document.getElementsByTagName("span");
 console.log(span);
+
+// -- retourne un tableau /!\

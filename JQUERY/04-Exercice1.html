@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 1 en JQuery</title>
+</head>
+<body>
+    <form action="truc.php" id="MonFormulaire">
+        <input type="text" required placeholder="Nom et Prénom" id="nomcomplet">
+        <input type="submit">
+    </form>
+    <!-- Consigne : avec l'aide de JQuery, vous devrez : 
+        1. A la soumission du formulaire, cacher le formulaire puis,
+        2. Créez un élément <p>
+        3. Dans cet élément, afficher : Bonjour <nomcomplet> correspondant
+            au nom saisi dans le formulaire 
+    -->
+    <script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+            // on ne palce pas le code dans une fonction sans nom car le code est exécuter au submit, cad après le chargement de la page.
+            // cibler formulaire - [.on('submit)] = écouter évenement 'submit' puis déclencher fonction event
+            $('#MonFormulaire').on('submit', function(event) {//cette fonction sera exécutée à la soumission du formulaire.
+                
+                // -- Permet d'annuler l'action par défaut du submit du formulaire -- /!\ ne pas oublier de le réactiver plus tard !
+                event.preventDefault();
+
+                // -- On remplace notre formulaire par le paragraphe ci-dessous
+                $(this).replaceWith("<p>Bonjour " + $('#nomcomplet').val() + " !</p>");
+                                                            } // fin de la fonction event
+            ) // fin de l'écoute .on('submit')
+
+            // -- console.log($(this)) ici, $(this) correspond à form#MonFormulaire
+    </script>
+</body>
+</html>
