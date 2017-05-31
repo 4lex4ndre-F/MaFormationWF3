@@ -43,17 +43,17 @@ $(function (){
 
         $('tbody').append('<tr><td>' + nom.val() + '</td><td>' + prenom.val() + '</td><td>' + email.val() + '</td><td>' + tel.val() + '</td></tr>');
 
-        // réinitialisation formmualire = vider les champs
-
-        // affichage notification
-        $('.alert-contact').removeClass('.alert-contact');
     };
 
     // -- fonction réinitialisation du formulaire : RAZ formulaire après ajout d'un contact
-    function reinitialisationFormulaire() {};
+    function reinitialisationFormulaire() {
+
+    };
 
     // -- Focntion d'affichage d'une notification
-    function afficheUneNotification() {};
+    function afficheUneNotification() {
+        $('div.alert-contact').show(50).delay(2000).hide(800);
+    };
 
     // -- Vérification de la présence de contact dans Contacts
     function estCEQunContactEstPresent () {
@@ -90,8 +90,8 @@ $(function (){
 
         // -- suppression des erreurs en début de fonction submit
         $('.has-error').removeClass('has-error');
-        // -- RAZ contact
-        contact =[];
+        
+        
         
         // -- annulation du comportement par défaut du submit (redirection php)
         event.preventDefault();
@@ -125,17 +125,9 @@ $(function (){
         if($('#contact').find('.has-error').length == 0) {
             ajouterContact(contact);
             estCEQunContactEstPresent();
+            afficheUneNotification();
         }
 
         
     }) //fin de l'écoute sur submit
-
-    
-       
-
-
-
-
-
-    
 }); // fin du code JQuery
