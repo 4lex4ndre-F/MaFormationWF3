@@ -68,7 +68,7 @@ $(function (){
 
     // -- Vérification de la présence de contact dans Contacts
     function estCEQunContactEstPresent () {
-        // -- PAS FAIT
+        // -- PAS FAIT...trop claqué :(
         
     };
 
