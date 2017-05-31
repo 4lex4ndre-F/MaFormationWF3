@@ -36,12 +36,13 @@
         $('#MonFormulaire').on('submit', function(recap) {
             recap.preventDefault();
             //$(this).replaceWith('<p> votre identité : ' + $('#fullname').val() + "<br>votre adresse : " + $('#email').val() + "<br>votre n° de tel : " + $('#tel').val() + "<br>Sujet : " + $('#sujet').val() + "</p>");
+            // -- On récupère les valeurs saisies dans des variables
             fullname    = $('#fullname').val();
             email       = $('#email').val();
             tel         = $('#tel').val();
             sujet       = $('#sujet').val();
             message     = $('#message').val();
-
+            // -- On remplace le contenu de la page par :
             $(this).replaceWith("<p>Bonjour, <strong>" + fullname + "</strong><em> ( " + email + " )</em><br>Vous nous avez contacté au sujet de : " + sujet + ".<br>Nous reviendrons vers vous dans les plus brefs délais au " + tel)
         });
     </script>
