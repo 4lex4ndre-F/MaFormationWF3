@@ -45,7 +45,7 @@ $(function (){
         $('tbody').append('<tr><td>' + nom.val() + '</td><td>' + prenom.val() + '</td><td>' + email.val() + '</td><td>' + tel.val() + '</td></tr>');
         $('.aucuncontact').remove();
         var coordonnee  = {
-        'nom'       :    nom.val(),
+        'nom'       :   nom.val(),
         'prenom'    :   prenom.val(),
         'email'     :   email.val(),
         'tel'       :   tel.val(),
@@ -69,6 +69,9 @@ $(function (){
     // -- Vérification de la présence de contact dans Contacts
     function estCEQunContactEstPresent () {
         // -- PAS FAIT...trop claqué :(
+        // -- comparaison de l'objet coordonnée avec le tableau contact
+        // -- il faut parcourir tous les éléments du tableau et les comparer aux valeurs du formulaire, cad coordonnee
+        
         
     };
 
@@ -134,7 +137,7 @@ $(function (){
         // -- si formulaire bien rempli
         if($('#contact').find('.has-error').length == 0) {
             ajouterContact(contact);
-            estCEQunContactEstPresent();
+            //estCEQunContactEstPresent();
             afficheUneNotification();
             //reinitialisationFormulaire();
         }
