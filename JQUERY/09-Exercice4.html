@@ -40,7 +40,7 @@
             // -- 2. avec getJSON et JSONP (Callback)
             $.getJSON('http://ip-api.com/json/?callback=', function(data){               
                 
-                $('<p>').text("Votre IP eest surveillée : " + data.query + " " + data.isp).css({'background':'yellow','color':'red'}).appendTo($('form'));
+                $('<p>').text("Votre IP est surveillée : " + data.query + " " + data.isp).css({'background':'yellow','color':'red'}).appendTo($('form'));
             });
             
             // Objet récupéré = {"as":"AS12322 Free SAS","city":"Paris","country":"France","countryCode":"FR","isp":"Free SAS","lat":48.8601,"lon":2.3507,"org":"Free SAS","query":"88.177.240.39","region":"IDF","regionName":"Île-de-France","status":"success","timezone":"Europe/Paris","zip":"75004"}
