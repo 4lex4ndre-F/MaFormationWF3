@@ -4,18 +4,51 @@ $(function() {
     // -- Déclaration de Variables
     var CollectionDeContacts = [];
 
-    /* --------------------------------------------------------------
-                        DECLARATION DES FONCTIONS
-    -------------------------------------------------------------- */
+    /* -------------------------------------------------------------\
+    |              ~~~~ DECLARATION DES FONCTIONS ~~~~              |
+    \------------------------------------------------------------- */
 
     // -- Fonction ajouterContact(Contact) : Ajouter un Contact dans le tableau de Contacts, mettre à jour le tableau HTML, réinitialiser le formulaire et afficher une notification.
-    function ajouterContact(UnContact) {}
+    function ajouterContact(UnContact) {
+
+        // -- ajout de "UnContact" dans le tableau CollectionDeContact
+        CollectionDeContacts.push(UnContact);
+        //console.log(CollectionDeContacts);
+
+        // -- MAJ tableau HTML : enlever la ligne indiquant "aucun contact"
+        $('.aucuncontact').hide(); // -- ou remove() pour effacer
+
+        // -- MAJ tableau HTML : création du tr et des td correspondants à l'objet contact
+        $('tbody').append('<tr><td>' + UnContact.nom + '</td><td>' + UnContact.prenom + '</td><td>' + UnContact.email + '</td><td>' + UnContact.tel + '</td></tr>');
+
+        // -- appel de la fonction reinitialisation
+        reinitialisationDuFormulaire();
+
+        // -- appel notification
+        afficheUneNotification()
+
+
+}
 
     // -- Fonction RéinitialisationDuFormulaire() : Après l'ajout d'un contact, on remet le formulaire à 0 !
-    function reinitialisationDuFormulaire() {}
+    function reinitialisationDuFormulaire() {
+
+        // -- En Javascript
+        // -- document.getElementById('contact').releasePointerCapture();
+
+        // -- En JQuery -- get(0) car JQuery renvoi un tableau et reset est une fonction Javascript
+        // -- console.log("contact log : " + $('#contact'));
+        // -- console.log("contact.get(0) log : " + $('#contact').get(0));
+        $('#contact').get(0).reset();
+        // -- autre méthode
+        // -- $('#contact .form-control').val('');
+
+    }
 
     // -- Affichage d'une Notification
-    function afficheUneNotification() {}
+    function afficheUneNotification() {
+        $('.alert-contact').fadeIn().delay(3000).fadeOut();
+    }
 
     // -- Vérification de la présence d'un Contact dans Contacts
     function estCeQunContactEstPresent(UnContact) {
@@ -79,11 +112,11 @@ $(function() {
         var mesInformationsSontValides = true;
 
         // -- Vérification du nom
-        if(nom.val().lenght == 0) {
+        if(nom.val().length == 0) {
             mesInformationsSontValides = false;
         }
         // -- Vérification du prenom
-        if(prenom.val().lenght == 0) {
+        if(prenom.val().length == 0) {
             mesInformationsSontValides = false;
         }
         // -- Vérification de l'email
@@ -91,10 +124,11 @@ $(function() {
             mesInformationsSontValides = false;
         }
         // -- Vérification du tel
-        if(tel.val().lenght == 0) {
+        if(tel.val().length == 0) {
             mesInformationsSontValides = false;
         }
-        
+        console.log('Est-ce que mes Informations sont valides ? ' + mesInformationsSontValides);
+
         if(mesInformationsSontValides) {
             // -- tout est correct, préparation du contact
             var contact = {
@@ -107,12 +141,16 @@ $(function() {
             console.log(contact);
 
             // -- Vérification avec estCeQunContactEstPresent
-            if(!estCeQunContactEstPresent(Contact)) {
+            if(!estCeQunContactEstPresent(contact)) {
+                
                 // -- Ajout du contact
+                ajouterContact(contact);
+
                 
 
             } else {
-
+                alert('ATTENTION\nCe contact est déjà présent.')
+                reinitialisationDuFormulaire();
             }
 
 
