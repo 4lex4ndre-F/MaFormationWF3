@@ -23,7 +23,8 @@
 $(function (){
 
     // -- Déclaration de variables
-    var contact =[];
+    var contact     = [];
+
 
     /*------------------------------------------------------------------
             DECLARATION DES FONCTIONS
@@ -42,12 +43,22 @@ $(function (){
         //$('tbody').find('tr').append('<td>' + tel.val() + '</td>');
 
         $('tbody').append('<tr><td>' + nom.val() + '</td><td>' + prenom.val() + '</td><td>' + email.val() + '</td><td>' + tel.val() + '</td></tr>');
+        $('.aucuncontact').remove();
+        var coordonnee  = {
+        'nom'       :   nom.val(),
+        'prenom'    :   prenom.val(),
+        'email'     :   email.val(),
+        'tel'       :   tel.val(),
+        };
 
+        contact.push(coordonnee);
+        console.log(coordonnee);
+        console.log(contact);
     };
 
     // -- fonction réinitialisation du formulaire : RAZ formulaire après ajout d'un contact
     function reinitialisationFormulaire() {
-
+        $('#contact .form-control').val('');
     };
 
     // -- Focntion d'affichage d'une notification
@@ -57,9 +68,11 @@ $(function (){
 
     // -- Vérification de la présence de contact dans Contacts
     function estCEQunContactEstPresent () {
-        // -- si présence de contact dans le tableau, on enlève le tr de classe aucuncontact
-        // -- je considère que il y a au moins un contact dans le tableau si le formulaire eest bien rempli (l.112)
-        $('.aucuncontact').remove();
+        // -- PAS FAIT...trop claqué :(
+        // -- comparaison de l'objet coordonnée avec le tableau contact
+        // -- il faut parcourir tous les éléments du tableau et les comparer aux valeurs du formulaire, cad coordonnee
+        
+        
     };
 
     // -- DECLARATION DE FONCTION de VALIDATION des EMAILS - paulund.co.uk : https://paulund.co.uk/regular-expression-to-validate-email-address
@@ -124,8 +137,9 @@ $(function (){
         // -- si formulaire bien rempli
         if($('#contact').find('.has-error').length == 0) {
             ajouterContact(contact);
-            estCEQunContactEstPresent();
+            //estCEQunContactEstPresent();
             afficheUneNotification();
+            //reinitialisationFormulaire();
         }
 
         
