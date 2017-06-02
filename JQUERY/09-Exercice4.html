@@ -37,7 +37,7 @@
             //    console.log(resultat);
           //  })
 
-            // -- 2. avec getJSON et JSONP (Callback)
+            // -- 2. avec getJSON et JSONP (Callback) - à appronfondir
             $.getJSON('http://ip-api.com/json/?callback=', function(data){               
                 
                 $('<p>').text("Votre IP est surveillée : " + data.query + " " + data.isp).css({'background':'yellow','color':'red'}).appendTo($('form'));
