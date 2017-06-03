@@ -1,0 +1,47 @@
+/* vérification du lien css */
+body {
+    background : #555;
+    color: #fff;
+}
+
+main {}
+
+section {
+    border: 2px solid #999;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#fff));
+    background-image: -webkit-linear-gradient(top, #000, #fff);
+    background-image: -moz-linear-gradient(top, #000, #fff);
+    background-image: linear-gradient(to bottom, #000, #fff);
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+div {}
+
+/* Style général des classes col-*, pour les distinguer les unes des autres */
+[class*="col-"] {
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, 0.2);
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin-bottom: 5px;  
+        }
+
+/* Style des div */
+.blue {
+    background :    #2E4172;
+    color:          #FFF0AA;
+}
+.red {
+    background:     #801515;
+    color :         #D4EE9F;
+}
+.green {
+    background:     #88CC88;
+    color :         #661141;
+}
+.yellow{
+    background:     #D4D46A;
+    color :         #261758;
+}
