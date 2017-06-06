@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage des caractères de la Page -->
+    <meta charset="UTF-8">
+
+    <!-- Affichage du site sans zoom, initialisé à 100% --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Pour Internet Explorer, s'assurer qu'il utiliise la dernière version de son moteur de rendu -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5shiv -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+
+    <!-- Respond.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+
+    <!-- titre de la Page -->
+    <title>La Grille Bootstrap</title>
+
+    <style>
+        [class*="col-"] {
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, 0.2);
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin-bottom: 5px;      
+        }
+    </style>
+
+    <!-- Pour afficher une description pour les moteurs de recherches - SE -->
+    <meta name="description" content="Résumé de la page">
+</head>
+<body>
+    
+    <!-- contenu HTML -->
+    <!-- Le container va inclure l'ensemble de nos lignes et colonnes -->
+    <!-- et le container-full -->
+    <main class="container">
+
+        <!-- création d'une ligne -->
+        <div class="row">
+
+            <!-- Dans vote ligne ou rangée, vous pouvez créer plusieurs colonnes,
+            mais rappelez vous, toujours sur la base de vos 12 colonnes -->
+
+            <!-- Une grande colonne de 12 -->
+            <div class="col-lg-12">col-lg-12</div>
+
+            <!-- Deux colonnes côte-à-côte -->
+            <div class="col-lg-6">col-lg-6</div>
+            <div class="col-lg-6">col-lg-6</div>
+
+            <!-- 3 colonnes -->
+            <div class="col-lg-4">col-lg-4</div>
+            <div class="col-lg-4">col-lg-4</div>
+            <div class="col-lg-4">col-lg-4</div>
+
+            <!-- 4 colonnes -->
+            <div class="col-lg-3">col-lg-3</div>
+            <div class="col-lg-3">col-lg-3</div>
+            <div class="col-lg-3">col-lg-3</div>
+            <div class="col-lg-3">col-lg-3</div>
+
+            <!-- Je peux imbriquer mes rangées -->
+            <div class="col-lg-12">
+                col-lg-12
+                <div class="row">
+                    <div class="col-lg-4">Col-lg-4</div>
+                    <div class="col-lg-8">
+                        col-lg-8
+                        <div class="row">
+                            <div class="col-lg-6">col-lg-6</div>
+                            <div class="col-lg-6">col-lg-6
+                                <img src="http://lorempixel.com/400/200/" alt="illustration" class="img-responsive img-rounded img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ./div.row -->
+        
+            <!--
+                PLUSIEURS TYPE DE COLONNE :
+                lg : Ecran Large
+                md : Ecran Moyen (medium)
+                sm : Ecran petit (small)
+                xs : Ecran très petit (x-small)
+            -->
+
+            <div class="row">
+                <!-- Observez le comportement de ces classes : -->
+
+                <!-- Test avec lg -->
+                <div class="col-lg-6">col-lg-6</div>
+                <div class="col-lg-6">col-lg-6</div>
+
+                <!-- Test avec md -->
+                <div class="col-md-6">col-md-6</div>
+                <div class="col-md-6">col-md-6</div>
+
+                <!-- Test avec sm -->
+                <div class="col-sm-6">col-sm-6</div>
+                <div class="col-sm-6">col-sm-6</div>
+
+                <!-- Test avec xs -->
+                <div class="col-xs-6">col-xs-6</div>
+                <div class="col-xs-6">col-xs-6</div>
+            </div> <!-- ./div.row -->
+
+            <div class="row">
+
+                <div class="col-lg-12 col-md-6 col-sm-3 col-xs-12">col-lg-12 col-md-6 col-sm-3 col-xs-12</div>
+                <div class="col-lg-12 col-md-6 col-sm-9 col-xs-12">col-lg-12 col-md-6 col-sm-9 col-xs-12</div>
+            </div> <!-- ./div.row -->
+
+            <!--
+                                A VOIR VOUS MEME (classes CSS) :
+- col-xx-push-*
+- col-xx-pull-*
+- col-xx-offset-*
+- visible-xx : premet de rendre visible une colonne pour un type d'écran en particulier
+- hidden-xx : premet de cacher une colonne pour un type d'écran en particulier
+            -->
+
+    </main> <!-- ./main.container -->
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Mon script -->
+    <script src="#"></script>
+</body>
+</html>
