@@ -90,15 +90,65 @@ Section Bandeau blanc
     font-family: 'Roboto Condensed', sans-serif !important;
     font-weight: 300;
     font-size: 36px;
-    color: #141414;
+    color: #303236;
+    margin: 40px 0;
 }
 #bandeauBlanc p {
+    margin: 40px 0;
 }
 /*
-Section Formulaire
+Section Formulaire - A Prendre Sur la Correction
 */
-#form {
-    display : block;
-    margin: 15px auto;
-    width: 80%;
+#contact {
+    padding: 100px;
 }
+#contact h3 {    
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+        .navbar-apple ul li {
+            margin: 0;
+        }
+        #mobile ul li {
+            width: calc( 100% / 4 );
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+        #mobile ul li {
+            width: calc( 100% / 3 );
+        }
+        #bandeauBlanc {
+            padding: 40px 0;
+        }
+        #bandeauBlanc img {
+            margin: 0 auto !important;
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+        #mobile ul li {
+            width: calc( 100% / 2 );
+        }
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+    }
