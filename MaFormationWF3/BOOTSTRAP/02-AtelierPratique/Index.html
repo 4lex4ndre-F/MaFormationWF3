@@ -151,31 +151,54 @@
                     <div class="row">   
                         <h3>Contact</h3>
                         <div class="col-sm-8 col-sm-push-2 col-xs-10 col-xs-push-1">
-
-                            <!-- Nom et prénom -->         
-                            <div class="formgroup">
-                                <div class="col-xs-12">
-                                    <input type="text">
+                            <form action="contact.php" id="contact-form"
+                                class="form-horizontal">
+                            
+                                <!-- Nom et Prénom -->
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input type="text" class="form-control"
+                                            placeholder="Saisissez votre Nom et Prénom" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Email et Tél -->
-                            <div class="formgroup">         
-                                <div class="col-sm-6">
 
+                                <!-- Email et Téléphone -->
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control"
+                                            placeholder="Saisissez votre Email" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="tel" class="form-control"
+                                            placeholder="Saisissez votre Telephone" required>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6">
 
+                                <!-- Sujet -->
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input type="text" class="form-control"
+                                            placeholder="Saisissez votre Sujet" required>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Sujet -->
+                                <!-- Message -->
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <textarea id="message" rows="5" class="form-control"
+                                            placeholder="Message..."></textarea>
+                                    </div>
+                                </div>
 
-                        <!-- TextArea -->
-
-                        <!-- bouton submit -->
-
-                        
+                                <!-- Bouton d'Envoi -->
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                    <button type="submit" class="btn btn-primary"
+                                        value="Envoyer ma Demande">Envoyer ma Demande</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>                        
                     </div>
                 </div>
             </section>
