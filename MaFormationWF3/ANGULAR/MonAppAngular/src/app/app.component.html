@@ -23,6 +23,11 @@
 
       </div><!-- ./ IFContacts -->
 
+      <!-- J'écoute ici l'évênement uncontactEstCree, lorsqu'il est émit, j'appelle la fonction ajouterUnContactdansListe -->
+      <app-ajouter-contact (unContactEstCree)="(ajouterContactDansListe($event))">
+        
+      </app-ajouter-contact>
+
     </div><!-- ./col-sm-4 -->
 
     <div class="col-sm-8">
@@ -40,15 +45,6 @@
 
     </div><!-- ./ col-sm-8 -->
   </div><!-- ./ row -->
-
-
-  <p>Bonjour {{Contact.fullname}} <i>({{Contact.username}})</i></p>
-
-  <div *ngIf="Contacts">
-    <div *ngFor="let contact of Contacts">
-      {{contact.fullname}} <i>({{contact.username}})</i>
-    </div>
-  </div>
 
   <footer class="text-center">
     Copyright &copy; 2017
