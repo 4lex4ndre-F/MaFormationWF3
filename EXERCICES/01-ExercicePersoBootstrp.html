@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage des caractères de la Page -->
+    <meta charset="UTF-8">
+
+    <!-- Affichage du site sans zoom, initialisé à 100% --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Pour Internet Explorer, s'assurer qu'il utiliise la dernière version de son moteur de rendu -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="assets/css/01-style.css">
+
+    <!-- HTML5shiv -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+
+    <!-- Respond.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+
+    <!-- titre de la Page -->
+    <title>Test des Fonctionnalités Responsive de BOOTSTRAP</title>
+
+    <!-- Pour afficher une description pour les moteurs de recherches - SE -->
+    <meta name="description" content="Résumé de la page">
+</head>
+<body>
+    
+    <!-- Contenu HTML -->
+
+    <!-- 1 seul <main> par page, qui va contenir l'ensemble de mon site (je peux faire autrement).
+        de classe conatainer OU container-full
+    -->
+    <main class="container-full">
+        <!-- Section ECRAN LARGE uniquement -->
+        <Section>
+            <h2>ECRAN LARGE</h2>
+        
+            <!-- 1ère <div>, ligne simple classe row dans Bootstrap - Ecran Large -->
+            <div class="row">
+                
+                <!-- 1 colonne de 12 -->
+                <div class="col-lg-12 blue">
+                    1 colonne de 12 - col-lg-12
+                </div>
+
+            </div> <!-- fin de ligne -->
+            <div class="row">
+
+                <!-- 2 colonnes de 6 -->
+                <div class="col-lg-6 red">
+                    col-lg-6
+                </div>
+                <div class="col-lg-6 yellow">
+                    col-lg-6
+                </div>
+            </div> <!-- fin de ligne -->
+            <div class="row">
+                
+                <!-- 3 colonnes de 4 -->
+                <div class="col-lg-4 blue">
+                    col-lg-4
+                </div>
+                <div class="col-lg-4 green">
+                    col-lg-4
+                </div>
+                <div class="col-lg-4 yellow">
+                    col-lg-4
+                </div>
+        
+             </div> <!-- fin de ligne -->
+            <div class="row">
+                
+                <!-- 4 colonnes de 3 -->
+                <div class="col-lg-3 blue">
+                    col-lg-3
+                </div>
+                <div class="col-lg-3 green">
+                    col-lg-3
+                </div>
+                <div class="col-lg-3 yellow">
+                    col-lg-3
+                </div>
+                <div class="col-lg-3 red">
+                    col-lg-3
+                </div>
+        
+             </div> <!-- fin de ligne -->
+        
+        </Section> <!-- fin de section -->
+    
+        <!-- Section ECRAN MEDIUM -->
+        <Section>
+            <h2>ECRAN SMALL</h2>
+        
+            <!-- 1ère <div>, ligne simple classe row dans Bootstrap - Ecran Large -->
+            <div class="row">
+                
+                <!-- 1 colonne de 12 -->
+                <div class="col-sm-12 blue">
+                    1 colonne de 12 - col-lg-12
+                </div>
+
+            </div> <!-- fin de ligne -->
+            <div class="row">
+
+                <!-- 2 colonnes de 6 -->
+                <div class="col-sm-6 red">
+                    col-sm-6
+                </div>
+                <div class="col-sm-6 yellow">
+                    col-sm-6
+                </div>
+            </div> <!-- fin de ligne -->
+            <div class="row">
+                
+                <!-- 3 colonnes de 4 -->
+                <div class="col-sm-4 blue">
+                    col-sm-4
+                </div>
+                <div class="col-sm-4 green">
+                    col-sm-4
+                </div>
+                <div class="col-sm-4 yellow">
+                    col-sm-4
+                </div>
+        
+             </div> <!-- fin de ligne -->
+            <div class="row">
+                
+                <!-- 4 colonnes de 3 -->
+                <div class="col-sm-3 blue">
+                    col-sm-3
+                </div>
+                <div class="col-sm-3 green">
+                    col-sm-3
+                </div>
+                <div class="col-sm-3 yellow">
+                    col-sm-3
+                </div>
+                <div class="col-sm-3 red">
+                    col-sm-3
+                </div>
+        
+             </div> <!-- fin de ligne -->
+        
+        </Section> <!-- fin de section -->
+
+        <!-- section avec 3 points de bascule -->
+        <Section>
+            <h2>RESPONSIVE 3 POINTS</h2>
+        
+            <!-- 1ère <div>, ligne simple classe row dans Bootstrap - Ecran Large -->
+            <div class="row">
+                
+                <!-- 1 colonne de 12 -->
+                <div class="col-lg-12 blue">
+                    1 colonne de 12 - col-lg-12
+                </div>
+
+            </div> <!-- fin de ligne -->
+
+           <div class="row">
+                
+                <!-- 4 colonnes de 3 -->
+                <div class="col-md-3 col-sm-6 blue">
+                    col-md-3 + col-sm-6
+                </div>
+                <div class="col-md-3 col-sm-6 green">
+                    col-md-3 + col-sm-6
+                </div>
+                <div class="col-sm-3 col-sm-6 yellow">
+                    col-md-3 + col-sm-6
+                </div>
+                <div class="col-sm-3 col-sm-6 red">
+                    col-md-3 + col-sm-6
+                </div>
+        
+             </div> <!-- fin de ligne -->
+        
+        </Section> <!-- fin de section -->
+    
+    
+    
+    </main> <!-- fin du <main-->
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Mon script -->
+    <script src="assets/js/01-Exercice01.js"></script>
+</body>
+</html>
