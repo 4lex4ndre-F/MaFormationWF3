@@ -1,0 +1,103 @@
+/* POLICE d'Ecriture */
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+h1, h2, h3, h4, h5 {
+    font-family: 'Merienda', cursive;
+}
+
+
+/* Nav */
+nav {
+    background: #061339;
+    color: #fff !important;
+}
+nav h2 {    
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* header */
+header {
+    background: url("../img/background.jpg") repeat-x;
+    height: 200px;
+}
+header h1 {
+    color: #fff;
+    text-align: center;
+    line-height: 150px;    
+    text-shadow: 2px 2px #555;
+}
+@media (max-width: 970px) {
+    h1 br {
+        display: block;
+    }
+    h1 {
+        line-height: 75px !important;
+        padding-top: 5px;
+    }
+}
+@media (max-width: 750px) {
+    h1 {
+        font-size: 25px;
+        line-height: 30px !important;
+        padding-top: 50px;    
+    }
+}
+
+
+/* main */
+main {
+    background: #F1F1F1;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+main h3 {
+    color: #2F4073;
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 0 30px 0S;
+}
+/* partie Formulaire */
+main form {
+    border: 1px solid #E8E8E8;
+    padding: 10px 10px 20px 10px;
+}
+main form select {
+    display: block;
+    width: 100%;
+}
+main form button{
+    display: block;
+    width: 100%;
+}
+/* partie Carroussel */
+#carouselDeChat .carousel-inner {
+    font-size: 20px;
+}
+
+/* section */
+section {
+    background: #DDDDDD;
+    padding-bottom: 50px;
+}
+
+section h2 {
+    color: #7885A5;
+}
+section p {
+    font-size: 15px;
+}
+section img {
+    background: #7885A5;
+    margin: 0 auto;
+}
+section:hover img {
+    background: #061339;
+}
+
+/* Footer */
+footer {
+    background: #061339;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+}
