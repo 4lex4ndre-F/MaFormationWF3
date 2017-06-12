@@ -3982,4 +3982,4 @@ p > video {
 	font-style: italic;
 	color: #555;
 }
-.gallery-item { width : 100% !important; }
+.gallery-item img{ width : 100% !important; }
