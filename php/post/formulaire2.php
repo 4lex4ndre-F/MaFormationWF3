@@ -18,9 +18,10 @@
         * { font-family: sans-serif ;}
         form { width: 30%; margin: 0 auto; }
         label { display: inline-block; width: 100%; font-style: italic }
-        input, textarea { height: 30px; border: 1px solid #eee; width: 100%; resize: none;}
+        input, textarea { height: 30px; border: 1px solid #eee; width: 100%; resize: none; background-color: lightgrey;}
         #submit { width: 100%; }
         textarea { height: 60px; }
+        p.alert { color: red; }
     </style>
 </head>
 <body>    
