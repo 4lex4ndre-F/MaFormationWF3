@@ -1,0 +1,12 @@
+* {
+    font-family: sans-serif;
+}
+form{ margin-top: 100px; }
+label {
+    display: inline-block;
+    width: 100px;
+}
+input, textarea, select {margin-bottom: 25px;}    
+input[type="submit"] {
+    margin-left: 100px;
+}

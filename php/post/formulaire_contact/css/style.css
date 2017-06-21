@@ -1,0 +1,29 @@
+body {
+  padding-top: 50px;
+}
+ * { 
+     font-family: sans-serif ;
+}
+form { width: 80%; margin: 20px auto; }
+label { 
+    display: inline-block; 
+    width: 100%; 
+    font-style: italic 
+}
+input, textarea { 
+    height: 30px; 
+    border: 1px solid #eee; 
+    width: 100%; 
+    resize: none; 
+}
+#submit { width: 100%; }
+textarea { height: 60px; }
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+button#submit, input#submit {
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+}

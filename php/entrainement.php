@@ -639,10 +639,18 @@ $couleur['p'] = 'pourpre';
 echo '<pre>'; var_dump($couleur); echo '</pre>';
 echo $couleur['b'] . '<br />';
 
+/*---------------------------------------------------------------------------------------------------------------------------------
+ Mercredi 21 juin 2017
+---------------------------------------------------------------------------------------------------------------------------------*/
 
 
+/*---------------------------------------
+           -- LES TABLEAUX - suite   --
+---------------------------------------*/
 
-
+// pour connaitre la taille d'un tableau (combien d'éléments dans le tableau array)
+echo 'Taille du tableau couleur: ' . count($couleur) . '<br />';
+echo 'Taille du tableau couleur: ' . sizeof($couleur) . '<br />';
 
 
 

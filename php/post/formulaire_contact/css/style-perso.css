@@ -1,0 +1,10 @@
+body{
+	padding-top: 70px;
+	padding-bottom: 10px;
+}
+.border{
+	border: 1px solid;
+}
+.navbar-default{
+	background-color: lightgrey;
+}
