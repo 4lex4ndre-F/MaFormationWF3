@@ -654,6 +654,140 @@ echo 'Taille du tableau couleur: ' . sizeof($couleur) . '<br />';
 
 
 
+/*---------------------------------------------------------------------------------------------------------------------------------
+                                                jeudi 22 juin 2017
+---------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------
+|         -- ARRAY - suite --
+|    Tableau array multidimensionnel
+---------------------------------------*/
+echo '<h1>Tableau array multidimensionnel</h1>';
+// Nous parlons de tableaux array multidimensionnel lorsqu'un tableau est lui même contenu dans un autre tableau.$_COOKIE
+
+$tableau_etudiants = array(0 => array( 'pseudo' => 'Marie', 'Nom' => 'Durand', 'email' => 'marie@email.fr'), 1 => array('pseudo' => 'Luc', 'Nom' => 'Dupond', 'email' => 'luc@email.fr'), 2 => array('pseudo' => 'Jean', 'Nom' => 'Soleil', 'email' => 'jean@email.fr'));
+
+// autre mise en forme :
+$tableau_etudiants = array(
+            0 => array(
+                'pseudo' => 'Marie', 
+                'Nom' => 'Durand', 
+                'email' => 'marie@email.fr'), 
+            1 => array(
+                'pseudo' => 'Luc', 
+                'Nom' => 'Dupond', 
+                'email' => 'luc@email.fr'), 
+            2 => array( 
+                'pseudo' => 'Jean', 
+                'Nom' => 'Soleil', 
+                'email' => 'jean@email.fr')
+            );
+
+echo '<pre>'; print_r($tableau_etudiants); echo '</pre>';
+
+// le mail de Luc :
+echo $tableau_etudiants[1]['email'] . '<br />'; // Nous rentrons dabords à l'indice de Luc au premier niveau, puis à l'indice 'email' du deuxième niveeau.
+echo '<br />';
+
+// on peut faire un foreach dans un foreach !
+
+// afficher tous les emails (via une boucle)
+$taille_tab = count($tableau_etudiants); // pour pas exécuter le count() à chaque itération.
+for($i = 0; $i < $taille_tab ; $i++)
+{
+    echo $tableau_etudiants[$i]['email'] . '<br />';
+}
+echo '<br />';
+
+// avec un foreach
+foreach($tableau_etudiants AS $valeur)
+{
+    echo $valeur['email'] . '<br />';
+}
+echo '<br />';
+
+// double foreach - on affiche tout
+foreach($tableau_etudiants AS $valeur)
+{
+    foreach($valeur AS $val)
+    {
+        echo $val . '<br />';
+    }
+    echo '<br />';
+}
+
+
+
+/*---------------------------------------
+|
+|           LES OBJETS - Intro
+|
+---------------------------------------*/
+
+echo '<h1>Les Objets</h1>';
+// un objet est un autre type de données. Un peu à la mamière d'un array, il permet de conserver des valeurs mais cela va plus loin puisqu'on peut également avoir des FONCTIONS dans un objet.
+
+// /!\ Les termes changent :
+// information dans un objet <=> une propriété ou attribut
+// fonction dans un objet <=> méthode
+
+// classe <=> modèle de construction d'un objet
+// on instancie un objet depuis une classe
+
+// un objet est toujours issu d'une classe (son modèle de construction)
+
+// pour déclarer une classe / class non sensibles à la classe / par convention première lettre en Maj
+class Etudiant
+{
+    public $prenom = 'Marie';
+    // public est un mot clé permettant de préciser que l'élément sera accessible directement sur l'objet. Sinon il faudrait passer par des methodes permettant de récupérer cette propriété ou de la modifier. (il existe aussi protected / private / static). On verra tout çà plus tard...
+    public $age = 25;
+    public function pays()
+    {
+        return 'France';
+    }
+}
+// un objet est un conteneur symbolique qui possède sa propre existence et incorpore des informations (propriétés) et des fonctions (methodes)
+
+// pour instancier un objet :
+$mon_objet_1 = new Etudiant(); // new est un mot clé obligatoire permettant d'instancier un objet depuis une classe.$_COOKIE
+$mon_objet_2 = new Etudiant();
+
+echo '<pre>'; var_dump($mon_objet_1); echo '</pre>';
+echo '<pre>'; var_dump($mon_objet_2); echo '</pre>';
+
+// pour voir les methodes de la classe / de l'objet
+echo '<pre>'; var_dump(get_class_methods($mon_objet_1)); echo '</pre>';
+
+// pour récupérer une propriété de l'objet
+echo $mon_objet_1->prenom . '<br />';
+
+// pour récupérer une methode de l'objet
+echo $mon_objet_1->pays() . '<br />';
+
+$mon_objet_1->prenom = 'Pierre';
+echo $mon_objet_1->prenom . '<br />';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
