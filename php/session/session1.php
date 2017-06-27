@@ -12,7 +12,7 @@ session_start(); // si la session n'existe pas, on la crée; si elle existe déj
 
 // Pour voir les fichiers de session => /tmp à la racine du serveur (xampp / wamp / etc.)
 
-$_SESSION['pseudo'] = "marie"; // $_SESSION est une superglobale, toutes les superglobales sont ds tbaleau array. Il est donc possible de créer des indices avec valeurs dans notre session (de manière temporaire).
+$_SESSION['pseudo'] = "marie"; // $_SESSION est une superglobale, toutes les superglobales sont des tableau array. Il est donc possible de créer des indices avec valeurs dans notre session (de manière temporaire).
 $_SESSION['password'] = 'soleil';
 $_SESSION['email'] = 'mail@mail.fr';
 $_SESSION['age'] = 40;
@@ -28,8 +28,8 @@ unset($_SESSION['password']); // unset($_SESSION) pour supprimer la session
 echo 'Deuxième affichage de la session (on supprime password): <br />';
 echo '<pre>'; print_r($_SESSION); echo '</pre>';
 
-// pour dettrurie la session
-session_destroy(); // nous permet de supprimer la session, EN REVANCHE il faut savoir que l'information session_destroy() est vue par l'interpréteur php, mise de côté puis exécutée uniquement à la fin du script en cours.
+// pour detruire la session
+session_destroy(); // nous permet de supprimer la session, EN REVANCHE il faut savoir que l'information session_destroy() est vue par l'interpréteur php, mise de côté puis exécutée uniquement A LA FIN du script en cours.
 
 // le script xi-dessous sera interprété avant le session_destroy();
 echo 'Troisième affichage de la session : <br />';

@@ -552,7 +552,7 @@ echo meteo2('été', '25');
 ---------------------------------------*/
 echo '<h1>Inclusion de fichier</h1>';
 // créer un fichier dans le même dossier que celui-ci : exemple.inc.php
-// dans ce fichier, mettere du texte. (lorem ipsum, html,...)
+// dans ce fichier, mettre du texte. (lorem ipsum, html,...)
 
 echo '<b>Première fois avec include:</b><br />';
 include("exemple.inc.php");
@@ -569,7 +569,7 @@ require_once("exemple.inc.php");
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 |Différences entre include et require : 
-|En cas d'erreur comme par exemple une faute de frappe sur le nom du fichier ou le fichier a été déplacé, etc.$_COOKIE
+|En cas d'erreur comme par exemple une faute de frappe sur le nom du fichier ou le fichier a été déplacé, etc.
 |-Include provoque une erreur MAIS continu l'exécution du script
 |- Require provoque une erreur ET bloque l'exécution de la suite du script.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -663,7 +663,7 @@ echo 'Taille du tableau couleur: ' . sizeof($couleur) . '<br />';
 |    Tableau array multidimensionnel
 ---------------------------------------*/
 echo '<h1>Tableau array multidimensionnel</h1>';
-// Nous parlons de tableaux array multidimensionnel lorsqu'un tableau est lui même contenu dans un autre tableau.$_COOKIE
+// Nous parlons de tableaux array multidimensionnel lorsqu'un tableau est lui même contenu dans un autre tableau.
 
 $tableau_etudiants = array(0 => array( 'pseudo' => 'Marie', 'Nom' => 'Durand', 'email' => 'marie@email.fr'), 1 => array('pseudo' => 'Luc', 'Nom' => 'Dupond', 'email' => 'luc@email.fr'), 2 => array('pseudo' => 'Jean', 'Nom' => 'Soleil', 'email' => 'jean@email.fr'));
 
@@ -750,7 +750,7 @@ class Etudiant
 // un objet est un conteneur symbolique qui possède sa propre existence et incorpore des informations (propriétés) et des fonctions (methodes)
 
 // pour instancier un objet :
-$mon_objet_1 = new Etudiant(); // new est un mot clé obligatoire permettant d'instancier un objet depuis une classe.$_COOKIE
+$mon_objet_1 = new Etudiant(); // new est un mot clé obligatoire permettant d'instancier un objet depuis une classe.
 $mon_objet_2 = new Etudiant();
 
 echo '<pre>'; var_dump($mon_objet_1); echo '</pre>';

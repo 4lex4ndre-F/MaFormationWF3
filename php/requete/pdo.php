@@ -3,7 +3,7 @@
 
                      -------------------- PDO --------------------
 
-                                    connexion php à BDD
+                                   connexion php à BDD
 
     PDO = Php Data Object
 
@@ -18,14 +18,14 @@
     succes => on obtient un entier (int) correspondant au nombre de lignes affectées.
     echec (erreur de syntaxe) => on obtient le booléen false.
 
-//QUERY()
+// QUERY()
     INSERT, UPDATE, DELETE, SELECT, SHOW, etc. : Query() est utilisé pour tout type de requête.
     Valeur de retour:
     -----------------
     succes => on obtient un nouvel objet issu de la class PDOStatement.
     echec => on obtient le booléen false.  
 
-//PREPARE() + EXECUTE()
+// PREPARE() + EXECUTE()
     INSERT, UPDATE, DELETE, SELECT, SHOW, etc. : Prepare() permet de préparer la requête mais ne l'exécute pas. Execute() éxécute la requête.
     Valeur de retour:
     -----------------

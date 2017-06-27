@@ -81,10 +81,10 @@ if(isset($_POST['pseudo']) && isset($_POST['email']))
 $message = ""; // variable pour le message final de validation ok ou pas ok
 
 if(isset($_POST['pseudo']) && isset($_POST['email']))
-
+{
 $pseudo = $_POST['pseudo'];
 $email = $_POST['email'];
-
+}
 // conttrole sur la taille du pseudo
 if (iconv_strlen($pseudo) >= 4 && iconv_strlen($pseudo) <= 14)
     {
