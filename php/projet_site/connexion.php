@@ -77,6 +77,8 @@ if(isset($_POST['pseudo']) && isset($_POST['mdp']))
 require("inc/header.inc.php");
 require("inc/nav.inc.php");
 echo '<pre>'; print_r($_SESSION); echo '</pre>';
+// echo '<pre>'; print_r($_SERVER); echo '</pre>';
+
 ?>
 
 

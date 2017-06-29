@@ -5,9 +5,12 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
-
-
-/* profil.php */
 div.cadre {
   border: 1px solid #bbb;
+  padding: 30px;
+  margin-bottom: 80px;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
 }

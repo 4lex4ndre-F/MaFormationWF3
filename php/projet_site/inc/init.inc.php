@@ -12,10 +12,13 @@ require_once("function.inc.php");
 // variable pour afficher des messages à l'utilisateur
 $message = "";
 
-// ouverture de la seesion
+// ouverture de la session
 session_start();
 
-// définition de cosntante pour le chemin absolu ainsi que pour la racine serveur
+
+
+// ---------------------------------- LIENS INTERNES AU SITE ----------------------------------
+// définition de constante pour le chemin absolu ainsi que pour la racine serveur
 // racine site
 define("URL", "/FORMATION/PARIS-IV/php/projet_site/");
 
