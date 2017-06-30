@@ -14,3 +14,7 @@ h3 {
   text-align: center;
   margin-bottom: 40px;
 }
+.vignette-article {
+  float: left;
+  border: 1px solid #aaa;
+}
