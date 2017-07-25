@@ -44,7 +44,7 @@
                 echo '<ul class="dropdown-menu">';
 
                   echo '<li><a href="' . URL . 'admin/gestion_boutique.php">Gestion boutique</a></li>';
-                  echo '<li><a href="' . URL . 'admin/gestion_commande.php">Gestion commande</a></li>';
+                  echo '<li><a href="' . URL . 'admin/gestion_commandes.php">Gestion commande</a></li>';
                   echo '<li><a href="' . URL . 'admin/gestion_utilisateur.php">Gestion utilisateur</a></li>';
 
                 echo '</ul></li>';

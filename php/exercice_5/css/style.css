@@ -1,0 +1,41 @@
+body {
+    background-color: #eee;
+    font-family: calibri;
+    color: #555;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+pre {
+    margin-top: 50px;
+}
+
+div.starter-template {
+    border: 1px solid #bbb;
+    margin: 60px auto 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+div.alert {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+label {
+    position: relative;
+}
+
+.glyphicon-asterisk {
+    font-size: 6px;
+    position: absolute;
+    color: red;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    line-height: 5px;
+}

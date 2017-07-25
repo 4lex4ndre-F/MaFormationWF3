@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax info text</title>
+</head>
+<body>
+    <div style="width: 50%; margin: 0 auto;">
+        <p id="demo" style="border: 1px solid; padding: 30px;">
+            ...
+        </p>
+        <button id="action">changer contenu</button>
+    </div>
+    <script>
+        document.getElementById("action").addEventListener("click", changerText);
+
+        function changerText() {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if(xhttp.readyState == 4 && xhttp.status == 200) {
+                    console.log(xhttp.responseText);
+                    document.getElementById("demo").textContent = xhttp.responseText;
+                }
+            }
+        xhttp.open("GET", "ajax_info_text.txt", true);
+        xhttp.send();
+        }
+    </script>
+</body>
+</html>

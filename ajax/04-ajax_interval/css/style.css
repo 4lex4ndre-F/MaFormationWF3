@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+    margin: 200px auto 50px;
+    font-family: calibri;
+}
+th, td {
+    min-width: 70px;
+    padding: 3px;
+    text-align: center;
+}
+th {
+    color: #242424;
+}
+td {
+    color: #555;
+}

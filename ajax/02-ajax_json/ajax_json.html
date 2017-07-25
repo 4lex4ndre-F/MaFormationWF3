@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onchange pour appeler une fonction (ajax()) au changmenet dans le select -->
+    <select onchange="ajax();" id="choix" style="width: 50%; display: block; margin: 0 auto; min-height: 28px; border: 1px solid #dedede; border-radius: 3px;">
+        <!-- idéalement, il faut aller chercher les prénoms en php -->
+        <option>--</option>
+        <option>Laura</option>
+        <option>Stéphanie</option>
+        <option>Guillaume</option>
+        <option>Amandine</option>
+        <option>Daniel</option>
+        <option>Julien</option>
+    </select>
+    <hr />
+    <div id="resultat">
+
+    </div>
+
+    <script>
+        function ajax() {
+            // on place le nom du fichier php qui va traiter l'information dans une variable
+            var file = "ajax_json.php";
+
+            
+            if(window.XMLHttpRequest) // if sans {} 1 seule ligne dans la condition
+                var xhttp = new XMLHttpRequest(); // pour la plupart des navigateurs
+            else // else sans {} 1 seule ligne dans la condition
+                var xhttp = new ActiveXObject("Microsoft.XMLHTTP"); // pour explorer
+            
+            // on récupère la valeur du champ select
+            var choix = document.getElementById('choix').value;
+            console.log('choix: ' + choix);
+
+            // préparation du ou des paramètres
+            var param = "personne=" + choix;
+            console.log('paramètre: ' + param);
+
+            xhttp.open("POST", file, true);
+            // la ligne suivante est spécifique à la méthode post
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            // mise en place de l'évenement
+            xhttp.onreadystatechange = function () {
+                if(xhttp.readyState == 4 && xhttp.status == 200)
+                {
+                    console.log('xhttp.responseText: ' + xhttp.responseText); // .responseText réponse de la requete en string (ou false)
+                    var reponse = JSON.parse(xhttp.responseText) // objet JSON
+                    document.getElementById('resultat').innerHTML = reponse.resultat;
+                }
+            }
+
+            xhttp.send(param); // on envoi avec les paramètres (personne=valeur)
+
+        }
+    </script>
+</body>
+</html>

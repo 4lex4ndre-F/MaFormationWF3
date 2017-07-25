@@ -24,7 +24,7 @@ l(google);
     l("La classe de la balise");
     l(google.className);
 
-    // -- D : Le texte de la blaise (l'élément)
+    // -- D : Le texte de la balise (l'élément)
     l('Le Texte de la Balise');
     l(google.textContent);
 

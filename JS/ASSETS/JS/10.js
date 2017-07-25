@@ -66,7 +66,7 @@ for(i = 0; i < PremierTrimestre.length; i++ ) {
             w('<li>');
                 w(matiere + " : " + Etudiant.moyenne[matiere]);
             w('</li>');
-            // calucl du nombre d'itération (= nbre de matières) : 
+            // calcul du nombre d'itération (= nbre de matières) : 
             it ++;
             // calcul total
             tot += Etudiant.moyenne[matiere];

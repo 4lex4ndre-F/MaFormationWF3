@@ -74,7 +74,7 @@ console.log(typeof unBooleen);
 /* -- Les Constantes
     La déclaration CONST permet de créer une constante accessible uniquement en lecture.
     Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures.
-    Une cosntante ne peut pas être déclarée à nouveau.
+    Une constante ne peut pas être déclarée à nouveau.
 */
 
 // -- Généralement, par convention les constantes sont en majuscules.
@@ -93,9 +93,9 @@ const PASSWORD = "mysql";
 |
 |   Au fur et à mesure que l'on affecte ou réaffecte
 |   des valeurs à une variable, celle-ci prend la nouvelle
-| valeur ou lle nouveau type. 
+| 	valeur ou le nouveau type. 
 |
-| En Javascript ( ECMA Script ); les variables sont auto-typées.
+| 	En Javascript ( ECMA Script ); les variables sont auto-typées.
 |
 |   Pour convertir une variable de type NUMBER en STRING
 |   et STRING en NUMBER, je peux utiliser les fonctions natives
@@ -107,7 +107,7 @@ console.log(unNombre);
 console.log(typeof unNombre);
 
 // -- La fonction parseInt() pour retourner une Entier à partir de ma chaîine de caractère.
-// Conseil : Lire de drotie à gauche
+// Conseil : Lire de droite à gauche
 unNombre = parseInt(unNombre);
 console.log(unNombre);
 console.log(typeof unNombre);

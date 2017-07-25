@@ -23,7 +23,7 @@
     Valeur de retour:
     -----------------
     succes => on obtient un nouvel objet issu de la class PDOStatement.
-    echec => on obtient le booléen false.  
+    echec => on obtient le booléen false. 
 
 // PREPARE() + EXECUTE()
     INSERT, UPDATE, DELETE, SELECT, SHOW, etc. : Prepare() permet de préparer la requête mais ne l'exécute pas. Execute() éxécute la requête.
@@ -53,6 +53,8 @@ $pdo = new PDO('mysql:host=localhost;dbname=wf3_entreprise', 'root', '', array(P
 // insert
 // $resultat = $pdo->exec("INSERT INTO employes (prenom, nom, sexe, service, salaire, date_embauche) VALUES('Luke', 'SKYWALKER', 'm', 'informatique', 2000, '2107-06-22')"); // variable de réception de la réponse
 // echo "nombre de lignes insérées par la dernière requete: " . $resultat . '<br />';
+// pour récupérer le dernier id inséré: 
+// echo $pdo->lastInsertId();
 
 // 3. PDO:: QUERY => SELECT + FETCH (pour un seul résultat) - pas sécurisé
 $resultat = $pdo->query("SELECT * FROM employes WHERE id_employes=350");
@@ -210,7 +212,7 @@ echo '<pre>'; print_r($donnees); echo '</pre>';
 
 
 // implode() & explode() - fonctions prédéfinies php
-// implode() permet d'afficher tous les élémnets d'un tableau array séparées par un séparateur fourni en 1er argument
+// implode() permet d'afficher tous les éléments d'un tableau array séparées par un séparateur fourni en 1er argument
 // explode() découpe une chaine de caractère selon un séparateur fourni en 1er argument et place chaque segment de cette chaîne dans un tableau array
 // exemple:
 echo implode('<br />', $donnees);

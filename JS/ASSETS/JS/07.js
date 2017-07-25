@@ -1,6 +1,6 @@
 /* --
 
-Votre mission, que vous devez accpeter !
+Votre mission, que vous devez accepter !
 Réaliser une fonction permettant à un internaute de :
     - Saisir son prénom dans un prompt,
     - Retourner à l'utilisateur : Bonjour [Prénom], Quel age as-tu ?

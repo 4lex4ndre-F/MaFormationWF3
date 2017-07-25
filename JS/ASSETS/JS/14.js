@@ -26,7 +26,7 @@ Les Evenements :    KEYBOARD (clavier)
 Les Evenements :    WINDOW (fenêtre)
 
     scroll      : défilement de la fenêtre
-    resizze     : redimensionnement de la fenêtre
+    resize     : redimensionnement de la fenêtre
 
 Les Evenements :    FORM (formulaire) /!\ Evaluation !
 

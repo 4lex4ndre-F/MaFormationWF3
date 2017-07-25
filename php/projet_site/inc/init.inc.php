@@ -20,7 +20,7 @@ session_start();
 // ---------------------------------- LIENS INTERNES AU SITE ----------------------------------
 // définition de constante pour le chemin absolu ainsi que pour la racine serveur
 // racine site
-define("URL", "/FORMATION/PARIS-IV/php/projet_site/");
+define("URL", "/FORMATION/FORMATIONWEB/PARIS-IV/php/projet_site/"); // modifier le repository chez moi
 
 //racine serveur - nécessaire pour les pièces jointes
 // DOCUMENT_ROOT dans $_SERVER

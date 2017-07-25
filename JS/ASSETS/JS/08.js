@@ -11,7 +11,7 @@ if(16 > MajoriteLegaleFR) {
 }
 */
 /* EXERCICE
-Créer une fonction permettant de vérifier l'age d'un visiteur (propmpt).
+Créer une fonction permettant de vérifier l'age d'un visiteur (prompt).
 S'il a la majorité légale, alors je lui souhaite la bienvenue, sinon ,
 je fais une redirection sur Google après lui avoir signalé le soucis.
 */
@@ -59,7 +59,7 @@ LES OPERATEURS DE COMPARAISON
 /*
 EXERCICE :
 J'arrive sur un Espace Sécurisé au moyen d'un email et d'un mot de passe.
-Je dois saisir mon email et mon mot de passse afin d'être authentifié sur le site.
+Je dois saisir mon email et mon mot de passe afin d'être authentifié sur le site.
 En cas d'échec une alert m'informe du problème.
 Si tous se passe bien, un message de bienvenue m'accueille
 */

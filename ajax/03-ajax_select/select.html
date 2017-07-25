@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        select, input {
+            width: 50%;
+            display: block; 
+            margin: 0 auto; 
+            min-height: 28px; 
+            border: 1px solid #dedede;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 50%; margin: 0 auto;">
+        <form action="" method="post">
+            <label for="pays">Pays</label>
+            <select name="pays" id="pays">
+                <option value="">Choisissez un pays</option>
+                <option>France</option>
+                <option>Italie</option>
+                <option>Espagne</option>
+            </select>
+
+            <label for="ville">Ville</label>
+            <select name="ville" id="ville">
+
+            </select>
+
+            <hr />
+            <input type="submit" value="valider" />
+        </form>
+    </div>
+
+    <script>
+        var champPays = document.getElementById("pays");
+        // évènement
+        champPays.addEventListener("change", monAjax);
+
+        function monAjax() {
+            var file = "select.php";
+            var xhttp = new XMLHttpRequest();
+
+            var valeur = champPays.value;
+            console.log(valeur);
+
+            // parametres
+            var param = 'pays=' + valeur;
+
+            xhttp.open("POST", file, true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            xhttp.onreadystatechange = function () {
+                if(xhttp.readyState == 4 && xhttp.status == 200)
+                {
+                    console.log('xhttp.responseText: '+xhttp.responseText); // permet de voir les erreurs php
+                    var result = JSON.parse(xhttp.responseText);
+                    console.log('typeof result: '+typeof(result));
+                    //console.log(result);
+                    document.getElementById('ville').innerHTML = result.resultat;
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+                    // equivalent var_dump
+                    function dump(obj) {
+                        var out = '';
+                        for(var i in obj) {
+                            out += i + ": " + obj[i] + "\n";
+                        }
+                        console.log('objet: ' + out);
+                    }
+                    dump(result);
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+                }
+
+            }
+            xhttp.send(param);
+        }
+    </script>
+
+</body>
+</html>

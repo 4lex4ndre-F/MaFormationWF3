@@ -1,0 +1,13 @@
+footer {
+    background: grey;
+    height: 100px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+.alert {
+    text-align: center;
+}
+form {
+    margin: 50px 0;
+}
